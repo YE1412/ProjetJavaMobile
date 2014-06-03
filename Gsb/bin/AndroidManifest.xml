@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.gsb"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:maxSdkVersion="19"
+        android:minSdkVersion="7"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.gsb.MainActivity"
+            android:configChanges="orientation"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.gsb.TestCursorActivity"
+            android:label="@string/title_activity_test_cursor" >
+        </activity>
+        <activity
+            android:name="com.example.gsb.MenuV"
+            android:label="@string/title_activity_menu_v" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.example.gsb.MenuDir"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_menu_dir" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+
+        </activity>
+        <activity
+            android:name="com.example.gsb.ConsultMed"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_consult_med"
+            android:screenOrientation="portrait" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+
+        </activity>
+        <activity
+            android:name="com.example.gsb.ConsultRapport"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_consult_rapport"
+            android:screenOrientation="portrait" >
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.example.gsb.NouvRapport"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_nouv_rapport"
+            android:screenOrientation="portrait" >
+
+            <!--
+            <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.example.gsb.ConsultPrat"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_consult_prat"
+            android:screenOrientation="portrait" >
+
+            <!--
+                     <intent-filter>
+                	<action android:name="android.intent.action.MAIN" />
+
+                	<category android:name="android.intent.category.LAUNCHER" />
+           	 	</intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.example.gsb.NouvPrat"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_nouv_prat"
+            android:screenOrientation="portrait" >
+
+            <!--
+                     <intent-filter>
+                	<action android:name="android.intent.action.MAIN" />
+
+                	<category android:name="android.intent.category.LAUNCHER" />
+           	 	</intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.example.gsb.ConsultVis"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_consult_vis"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.example.gsb.StatsActivity"
+            android:label="@string/title_activity_stats" >
+        </activity>
+    </application>
+
+</manifest>

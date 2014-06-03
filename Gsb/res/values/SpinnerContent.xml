@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Regions">
+        <item>Choisir une région :</item>
+        <item >-AL-Alsace</item>
+        <item >-AQ-Aquitaine</item>
+        <item >-AU-Auvergne</item>
+        <item >-BN-Basse Normandie</item>        
+        <item >-BO-Bourgogne</item>
+        <item >-BG-Bretagne</item>
+        <item >-CE-Centre</item>
+        <item >-CA-Champagne Ardennes</item>
+        <item >-FC-Franche Comté</item>
+        <item >-HN-Haute Normandie</item>
+        <item >-IF-Île de France</item>
+        <item >-LG-Languedoc</item>
+        <item >-LI-Limousin</item> 
+        <item >-MP-Midi Pyrénées</item>
+        <item >-NP-Nord Pas de Calais</item>
+        <item >-PL-Pays de la Loire</item>
+        <item >-PI-Picardie</item>
+        <item >-PC-Poitou Charentes</item>
+        <item >-PA-Provence Alpes Côte d\'Azur</item>
+        <item >-RA-Rhône Alpes</item>
+        <item >-RO-Roussilon</item>
+        <item >-VD-Vendée</item>
+    </string-array>
+    
+</resources>
