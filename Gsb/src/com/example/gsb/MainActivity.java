@@ -156,8 +156,10 @@ public class MainActivity extends Activity implements View.OnTouchListener, View
 				    	        	StringBuilder sb=ident.getResponse();
 				    	            if(sb!=null){
 				    	            	JSONObject jObj = null;
-				    	            	String result = sb.toString();
+				    	            	String result = sb.toString().substring(1);
+				    	            	Log.v("INDEX", "ind :"+result.indexOf("{"));
 				    	            	Log.v("RESULTAT REQUETE HTTP", sb.toString());
+				    	            	
 										try {
 											jObj = new JSONObject(result);
 										} catch (JSONException e1) {
@@ -307,9 +309,11 @@ public class MainActivity extends Activity implements View.OnTouchListener, View
 											}
 										} catch (NumberFormatException e) {
 											// TODO Auto-generated catch block
+											UpdateIHM(4);
 											e.printStackTrace();
 										} catch (JSONException e) {
 											// TODO Auto-generated catch block
+											UpdateIHM(3);
 											e.printStackTrace();
 										}
 				    	            }
@@ -416,6 +420,36 @@ public class MainActivity extends Activity implements View.OnTouchListener, View
    					break;
         	   case 2:
         		   Toast.makeText(getApplicationContext(), "Matricule, Nom ou Region incorrecte !", Toast.LENGTH_LONG).show();
+        		   break;
+        	   case 3:
+        	   		box.setTitle("Erreur !");
+    				box.setMessage("Erreur liée à la conversion des données reçues !");
+        			box.setNeutralButton("Ok", new DialogInterface.OnClickListener(){
+
+        				@Override
+        				public void onClick(DialogInterface dialog, int which) {
+        					// TODO Auto-generated method stub
+        					dialog.cancel();
+        				}
+        				
+        			});
+        			box.setView(lay);
+        			box.show();
+        		   break;
+        	   	case 4:
+        	   		box.setTitle("Erreur !");
+    				box.setMessage("Erreur inconnue !");
+        			box.setNeutralButton("Ok", new DialogInterface.OnClickListener(){
+
+        				@Override
+        				public void onClick(DialogInterface dialog, int which) {
+        					// TODO Auto-generated method stub
+        					dialog.cancel();
+        				}
+        				
+        			});
+        			box.setView(lay);
+        			box.show();
         		   break;
         		  default:
         			  break;

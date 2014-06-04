@@ -98,7 +98,7 @@
         </LinearLayout>
     </ScrollView>
 
-    <Space
+    <!-- <Space
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="fill_vertical" />
@@ -117,6 +117,6 @@
 
     <Space
         android:layout_width="100dp"
-        android:layout_height="72dp" />
+        android:layout_height="72dp" /> -->
 
 </LinearLayout>

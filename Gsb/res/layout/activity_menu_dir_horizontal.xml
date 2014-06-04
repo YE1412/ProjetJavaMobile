@@ -19,12 +19,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Bienvenue"
             android:textAppearance="?android:attr/textAppearanceMedium" />
     </LinearLayout>
 
-    <GridLayout
-        android:id="@+id/GridLayout1"
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -32,9 +31,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="false"
         android:layout_marginBottom="17dp"
-        android:columnCount="1"
-        android:orientation="horizontal"
-        android:rowCount="5" >
+        android:orientation="vertical" >
 
         <LinearLayout
             android:id="@+id/LinearLayout6"
@@ -71,7 +68,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="fill_horizontal"
             android:layout_marginTop="15dp"
-            android:layout_row="3"
             android:gravity="center" >
 
             <Button
@@ -99,9 +95,8 @@
         <LinearLayout
             android:id="@+id/LinearLayout3"
             android:layout_width="158dp"
-            android:layout_column="0"
-            android:layout_gravity="center_horizontal|top"
-            android:layout_row="1" >
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top" >
 
             <Button
                 android:id="@+id/button2"
@@ -109,6 +104,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/Logout" />
         </LinearLayout>
-    </GridLayout>
+    </LinearLayout>
 
 </RelativeLayout>
