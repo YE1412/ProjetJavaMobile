@@ -18,7 +18,7 @@ import org.apache.http.message.BasicNameValuePair;
 import android.util.Log;
 
 public class ConnexionHTTP {
-	private final static String hostWebDev="webdev.cluster1.easy-hebergement.net/";
+	private final static String hostWebDev="89.159.118.89/elusuey/";
 	private HttpPost httpLink;
 	private String Path;
 	private HttpClient httpClient;

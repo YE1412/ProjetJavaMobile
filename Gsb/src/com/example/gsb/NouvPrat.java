@@ -304,7 +304,7 @@ public class NouvPrat extends Activity implements View.OnTouchListener, View.OnC
 					}
 					break;
 				case 5:
-					if(Champs[i].isEmpty())
+					if(Champs[i].equals(""))
 					{
 						result[i]="false";
 					}
@@ -331,7 +331,7 @@ public class NouvPrat extends Activity implements View.OnTouchListener, View.OnC
 					}
 					break;
 				default:
-					if(Champs[i].isEmpty())
+					if(Champs[i].equals(""))
 					{
 						result[i]="false";
 					}
