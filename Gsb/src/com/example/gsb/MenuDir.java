@@ -53,12 +53,6 @@ public class MenuDir extends Activity implements View.OnTouchListener, View.OnCl
 	    
 	    accueil= (TextView) findViewById(R.id.textView1);
 	    accueil.setText("Bienvenue dans votre espace personel M./Mme "+donnees[0]+" "+donnees[2]+" !");
-	    //Creation de l'objet Visiteur représentant le visiteur connecté//
-	   // vis=new Visiteur(mat, nom, prenom, adresse, cp, ville, dateEmb, seccode, labcode);
-	    //Ajout du visiteur à la base SQLite//
-	    //basemanage=new VisiteurDAO(this);
-	    //basemanage.ajouterVisiteur(vis);
-	    	//onSaveInstanceState(savedInstanceState);
 	   //Définition des bouttons// 
 	    this.btn1 = (Button) findViewById(R.id.Button02);
 	    btn1.setOnClickListener(this);

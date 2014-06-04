@@ -163,7 +163,8 @@ public class NouvPrat extends Activity implements View.OnTouchListener, View.OnC
 					// Praticien //
 					PraticienDAO manageprat=new PraticienDAO(getApplicationContext());
 					int numPra=manageprat.getNbPraticien()+1;
-					this.prat=new Praticien(numPra, ChampsForm[0], ChampsForm[1], ChampsForm[2], Long.valueOf(ChampsForm[4]), ChampsForm[3], Double.valueOf(ChampsForm[5]), typeMEF[1]);
+					this.prat=new Praticien(numPra, ChampsForm[0], ChampsForm[1], ChampsForm[2], 
+							Long.valueOf(ChampsForm[4]), ChampsForm[3], Double.valueOf(ChampsForm[5]), typeMEF[1]);
 					
 					// Base SQLite //
 					manageprat.ajouterPraticien(prat);
