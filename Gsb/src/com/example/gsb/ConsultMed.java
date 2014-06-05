@@ -207,7 +207,8 @@ public class ConsultMed extends Activity implements OnItemSelectedListener, View
 				element.put("2", donnee[j][1]);
 				list.add(element);			
 			}
-			SimpleAdapter adapter= new SimpleAdapter(this, list, android.R.layout.simple_list_item_2, new String[]{"1", "2"}, new int[]{android.R.id.text1, android.R.id.text2});
+			SimpleAdapter adapter= new SimpleAdapter(this, list, android.R.layout.simple_list_item_2, new String[]{"1", "2"},
+					new int[]{android.R.id.text1, android.R.id.text2});
 
 			detailMed.setAdapter(adapter);
 			detailMed.setVisibility(View.VISIBLE);

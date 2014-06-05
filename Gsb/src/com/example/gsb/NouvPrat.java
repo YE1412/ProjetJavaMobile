@@ -190,7 +190,7 @@ public class NouvPrat extends Activity implements View.OnTouchListener, View.OnC
 							ConnexionHTTP ident= new ConnexionHTTP(nameValuePairs);
 		    	        	StringBuilder sb=ident.getResponse();
 		    	            if(sb!=null){
-		    	            	String result = sb.toString();
+		    	            	String result = sb.toString().substring(1);
 		    	            	JSONObject jObj = null;
 								try {
 									jObj = new JSONObject(result);

@@ -163,7 +163,8 @@ public class ConsultVis extends Activity implements OnItemSelectedListener, View
 				element.put("2", donnee[j][1]);
 				list.add(element);			
 			}		
-			SimpleAdapter adapt= new SimpleAdapter(this, list, android.R.layout.simple_list_item_2, new String[]{"1", "2"}, new int[]{android.R.id.text1, android.R.id.text2});	
+			SimpleAdapter adapt= new SimpleAdapter(this, list, android.R.layout.simple_list_item_2, new String[]{"1", "2"},
+					new int[]{android.R.id.text1, android.R.id.text2});	
 			detailVis.setAdapter(adapt);
 			detailVisView.setVisibility(View.VISIBLE);
 		}

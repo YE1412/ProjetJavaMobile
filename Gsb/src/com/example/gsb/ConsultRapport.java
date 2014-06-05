@@ -329,11 +329,13 @@ public class ConsultRapport extends Activity implements OnItemSelectedListener, 
 				qte.setText(String.valueOf(offre.getQuantite()));
 				
 				//lay.removeAllViews();
-				lay.addView(txvTitle, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT , LinearLayout.LayoutParams.WRAP_CONTENT ));
+				lay.addView(txvTitle, new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT ,
+						LinearLayout.LayoutParams.WRAP_CONTENT ));
 				lay.addView(med, new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT , 1f ));
 				lay.addView(qte, new LinearLayout.LayoutParams(80, LinearLayout.LayoutParams.WRAP_CONTENT));
 				
-				LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT , LinearLayout.LayoutParams. WRAP_CONTENT );
+				LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT ,
+						LinearLayout.LayoutParams. WRAP_CONTENT );
 				OffLay.addView(lay, params);
 			}
 			//layOffre.removeAllViews();
@@ -405,7 +407,8 @@ public class ConsultRapport extends Activity implements OnItemSelectedListener, 
 			element.put("2", donnee[j][1]);
 			list.add(element);			
 		}		
-		SimpleAdapter adapter= new SimpleAdapter(this, list, android.R.layout.simple_list_item_2, new String[]{"1", "2"}, new int[]{android.R.id.text1, android.R.id.text2});	
+		SimpleAdapter adapter= new SimpleAdapter(this, list, android.R.layout.simple_list_item_2, new String[]{"1", "2"},
+				new int[]{android.R.id.text1, android.R.id.text2});	
 		detailRapp.setAdapter(adapter);
 		detailRapp.setVisibility(View.VISIBLE);
 		 

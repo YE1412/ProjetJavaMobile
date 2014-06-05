@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
@@ -28,12 +29,14 @@ public class ConsultPrat extends Activity implements OnItemSelectedListener, Vie
 	private Praticien pratEnVisu;
 	private int index;
 	private int indexSpinn;
+	private ConsultPrat wind;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_consult_pra);
 		setTitle("Consultation des Praticiens");
 		
+		wind=this;
 		// On récupère l'intent qui a lancé cette activité
 	    Intent i = getIntent();
 	    String[] donnees=i.getStringArrayExtra(MainActivity.EXTRA_FLUX);
@@ -202,10 +205,30 @@ public class ConsultPrat extends Activity implements OnItemSelectedListener, Vie
 				element.put("2", donnee[j][1]);
 				list.add(element);			
 			}
-			SimpleAdapter adapter= new SimpleAdapter(this, list, android.R.layout.simple_list_item_2, new String[]{"1", "2"}, new int[]{android.R.id.text1, android.R.id.text2});
-
+			SimpleAdapter adapter= new SimpleAdapter(this, list, android.R.layout.simple_list_item_2, 
+					new String[]{"1", "2"}, new int[]{android.R.id.text1, android.R.id.text2});
+			
+			PraticienDAO managePra=new PraticienDAO(getApplicationContext());
 			detailPraticien.setAdapter(adapter);
 			detailPraticien.setVisibility(View.VISIBLE);
+			LinearLayout lay_principal=(LinearLayout) findViewById(R.id.LayoutDetails);
+			if(lay_principal.getChildCount()>2)
+			{
+				lay_principal.removeViewAt(2);
+			}
+			if(managePra.concernerParRapports(pra.getPraNum()))
+			{
+				LinearLayout lay = new LinearLayout(wind);
+				lay.setOrientation(LinearLayout.HORIZONTAL);
+				Button boutton=new Button(wind, null, android.R.attr.buttonStyleSmall);
+				boutton.setText("Afficher les rapports");
+				//boutton.setOnClickListener(this);
+				boutton.setVisibility(View.VISIBLE);
+				lay .addView( boutton , new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT , LinearLayout.LayoutParams.WRAP_CONTENT ) );
+				
+				LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT , LinearLayout.LayoutParams. WRAP_CONTENT );
+				lay_principal.addView( lay , params );
+			}
 		}
 
 }

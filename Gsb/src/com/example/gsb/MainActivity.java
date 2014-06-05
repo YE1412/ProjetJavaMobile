@@ -157,8 +157,8 @@ public class MainActivity extends Activity implements View.OnTouchListener, View
 				    	            if(sb!=null){
 				    	            	JSONObject jObj = null;
 				    	            	String result = sb.toString().substring(1);
-				    	            	Log.v("INDEX", "ind :"+result.indexOf("{"));
-				    	            	Log.v("RESULTAT REQUETE HTTP", sb.toString());
+				    	            	/*Log.v("INDEX", "ind :"+result.indexOf("{"));
+				    	            	Log.v("RESULTAT REQUETE HTTP", sb.toString());*/
 				    	            	
 										try {
 											jObj = new JSONObject(result);

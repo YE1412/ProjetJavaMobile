@@ -41,7 +41,7 @@ public class StatsActivity extends Activity {
 	    //Récupération du nombre de rapports//
 	    RapportDAO rapp=new RapportDAO(getApplicationContext());
 	    nbRapp=rapp.getNbRapportsParVis(visEnVisu);
-	    Log.v("Nb RAPPORTS", " "+nbRapp);
+	    //Log.v("Nb RAPPORTS", " "+nbRapp);
 	  //Gestion du detail des Visiteurs //
    		detailVis= (ListView) findViewById(R.id.listView1);
    		

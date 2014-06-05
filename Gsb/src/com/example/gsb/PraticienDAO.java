@@ -109,4 +109,20 @@ public class PraticienDAO extends DAOBase{
 		Log.v("VIDAGE DE LA TABLE", "table vidée" );
 		close();
 	}
+	
+	public Boolean concernerParRapports(int pranum){
+		Boolean result = null;
+		open();
+		Cursor c;
+			c=mDb.rawQuery("SELECT DISTINCT v."+BdActivity.RAPPORT_NUM+" FROM "+BdActivity.RAPPORT_TABLE_NAME+" as v WHERE v."+BdActivity.RAPPORT_PRANUM+"=?", new String[]{String.valueOf(pranum)});
+		if(c.getCount()>0){
+			result=true;
+		}
+		else
+		{
+			result=false;
+		}
+		close();
+		return result;
+	}
 }
